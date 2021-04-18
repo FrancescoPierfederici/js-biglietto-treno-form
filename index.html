@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="flex flex-center">
+        <div class="flex-column">
+            <h1 id="titolo" class="flex " style="color:white;">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <div class="bg-white text-center ">
+                <ul class="flex ">
+                    <li class="list"><strong> Nome e Cognome</strong></li>
+                    <li class="list"><strong>Km da percorrere</strong></li>
+                    <li class="list"> <strong>Fascia d'Età</strong></li>
+                </ul>
+                <form action="" id="myForm">
+                    <input type="text" placeholder="" name="name">
+                    <input type="text" placeholder=""  name="kmPercorsi">
+                    <select id = "fasciaEta" name="fasciaEta">
+                        <option value="Minorenni">Minorenni</option>
+                        <option value="Maggiorenni">Maggiorenni</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                    <div class="flex flex-center">
+                        <button class="b-one button"><strong><a class=" link-ed" href="">Genera</a> </strong> </button>
+                        <button class="b-two button"> <strong><a class=" link-ed" href="">Annulla</a> </strong>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+            <h1 id="titolo" class="flex flex-center" style="color:white;">IL TUO BIGLIETTO</h1>
+            <div class="bg-white2 text-center ">
+                <h3>DETTAGLIO PASSEGGERI</h3>
+                <hr class="">
+                <ul class="flex flex-content ">
+                    <li class="bg-grey"><strong>NOME <br> PASSEGGERO <br>
+                            <h4 id="nomeUtente"></h4>
+                        </strong></li>
+                    <li class="padd"><strong>Offerta</strong> <br>
+                        <p class="padd3" id="fasciaScelta"></p>
+                    </li>
+                    <li class="padd"><strong>Carrozza</strong><br>
+                        <p class="padd3" id="numeroCarrozza"></p>
+                    </li>
+                    <li class="padd"><strong>Codice <br> CP</strong><br>
+                        <p class="padd2" id="numeroRandom"></p>
+                    </li>
+                    <li class="padd"><strong>Costo <br> biglietto</strong><br>
+                        <p class="padd2" id="prezzoBiglietto"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="myscript.js"></script>
+</body>
+
+</html>
