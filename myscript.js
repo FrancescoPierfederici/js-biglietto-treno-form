@@ -34,22 +34,28 @@ function onWindowLoad() {
 
         var numeroRandom = document.getElementById("numeroRandom").innerHTML = Math.floor(Math.random() * 10000) + 90000;
         var numeroCarrozza = document.getElementById("numeroCarrozza").innerHTML = Math.floor(Math.random() * 20) + 1;
+
+
         // Blocchiamo il comportamento di default del submit che normalmente
         // ricaricherebbe la pagina
         event.preventDefault();
+
+
         // Recupero l'elemento al quale ho associato l'evento submit
         var form = event.currentTarget;
+
+
         // Recupero la lista degli elementi presenti nel form
         var formElements = form.elements;
+
+        
         var kmPercorsi = formElements.kmPercorsi.value;
         var nome = nomeElement.value;
-
 
         nomeUtenteElement.innerHTML = nome;
 
 
-
-        var fasciaEta = document.getElementById("fasciaEta").value
+        // var fasciaEta = document.getElementById("fasciaEta").value
         document.getElementById("fasciaScelta").innerHTML = document.getElementById("fasciaEta").value;
         var sconto = document.getElementById("fasciaEta").value;
 
@@ -57,9 +63,7 @@ function onWindowLoad() {
         var prezzoBiglietto = (kmPercorsi * prezzoBigliettoaKm).toFixed(2);
 
 
-
-
-        if (sconto === "Minorenni") {
+        if (sconto === "minorenni") {
             document.getElementById("prezzoBiglietto").innerHTML = (prezzoBiglietto - ((prezzoBiglietto * 20) / 100)).toFixed(2) + "€";
 
         } else if (sconto === "over65") {
@@ -68,10 +72,6 @@ function onWindowLoad() {
         } else {
             document.getElementById("prezzoBiglietto").innerHTML = prezzoBiglietto + "€";
         }
-
-
-
-
 
 
     });
