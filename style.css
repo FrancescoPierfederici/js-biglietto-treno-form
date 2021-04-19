@@ -8,6 +8,8 @@
 main{
     background-color: rgb(192, 12, 153);
     height: 100vh;
+    overflow: hidden;
+    
 }
 .bg-white{
     background-color: white;
@@ -52,8 +54,8 @@ select{
     border:1px solid rgb(211, 62, 179) ;
 }
 h1{
-    padding-bottom:30px;
-    padding-top: 30px;
+    padding-bottom:20px;
+    padding-top: 20px;
 }
 
 /* button{ */
@@ -153,13 +155,7 @@ li{
 .padd3{
     padding-top: 55px;
 }
-.col1{
-    width: calc(100% / 3);
-    height:200px;
-}
-.col{
-    width: calc(100% / 4);
-}
+
 .bg-grey{
     background-color: rgb(158, 157, 157);
     height: 150px;
@@ -168,3 +164,38 @@ li{
 /* h4{
     padding-top:30px;
 } */
+@media screen and (max-width:500px){
+    h1{
+        font-size: 15px;
+    }
+
+    input{
+        width:150px ;
+    }
+    h3{ 
+        font-size: 15px;
+    }
+    /* .bg-white2{
+    width:400px
+    } */
+}
+
+
+
+
+@media screen and (min-width:501px) and (max-width:600px){
+    input{
+         width:150px ;
+    }
+    
+    h1{
+        font-size: 25px;
+    }
+
+}
+    
+    /* .list{
+        padding:10px 0px 0 60px;
+        font-size: 12px;
+    }
+    */
