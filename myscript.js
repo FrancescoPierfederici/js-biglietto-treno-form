@@ -9,8 +9,6 @@
 // Aggiungiamo una piccola animazione al click su "Crea" e "Annulla", se clicchiamo su annulla dobbiamo ripulire il form.
 
 
-var element = document.getElementById("titolo");
-element.style.color = "white";
 
 
 
@@ -18,6 +16,9 @@ window.addEventListener("load", function () {
     console.log("pagina caricata completamente")
 
     onWindowLoad()
+    var element = document.getElementById("titolo");
+    element.style.color = "white";
+
 })
 
 function onWindowLoad() {
@@ -28,17 +29,19 @@ function onWindowLoad() {
     // submit = avviene ogni volta che si preme il pulsante INVIO all'interno di un input 
     //  o si preme sul pulsante invio con il mouse
     myForm.addEventListener("submit", function (event) {
+        event.preventDefault();
         var nomeElement = document.querySelector("[name='name']");
         var kmPercorsiElement = document.querySelector("[name='kmPercorsi']");
         var nomeUtenteElement = document.getElementById("nomeUtente");
 
-        var numeroRandom = document.getElementById("numeroRandom").innerHTML = Math.floor(Math.random() * 10000) + 90000;
-        var numeroCarrozza = document.getElementById("numeroCarrozza").innerHTML = Math.floor(Math.random() * 20) + 1;
+        var numeroRandom = document.getElementById("numeroRandom");
+        numeroRandom.innerHTML = Math.floor(Math.random() * 10000) + 90000;
+        var numeroCarrozza = document.getElementById("numeroCarrozza"); numeroCarrozza.innerHTML = Math.floor(Math.random() * 20) + 1;
 
 
         // Blocchiamo il comportamento di default del submit che normalmente
         // ricaricherebbe la pagina
-        event.preventDefault();
+
 
 
         // Recupero l'elemento al quale ho associato l'evento submit
@@ -48,7 +51,7 @@ function onWindowLoad() {
         // Recupero la lista degli elementi presenti nel form
         var formElements = form.elements;
 
-        
+
         var kmPercorsi = formElements.kmPercorsi.value;
         var nome = nomeElement.value;
 
